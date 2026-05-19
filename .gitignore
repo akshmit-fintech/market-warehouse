@@ -1,0 +1,43 @@
+# ── AI agent tooling ────────────────────────────────────────────────────────
+.agents/
+skills-lock.json
+
+# ── Project docs (not tracked — local only) ─────────────────────────────────
+PRD.md
+phase1-roadmap.md
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+
+# ── Generated data ───────────────────────────────────────────────────────────
+data/
+*.duckdb
+*.db
+*.parquet
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+*.whl
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS artefacts ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

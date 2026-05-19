@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "market-warehouse"
+version = "0.1.0"
+description = "NSE Data Cleaner + OHLCV Warehouse — Phase 1: EOD for NSE Stocks"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Akshmit" }
+]
+
+dependencies = [
+    # Config & validation
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0",
+
+    # Logging
+    "structlog>=25.5.0",
+
+    # Data processing
+    "polars>=1.0",
+    "duckdb>=1.0",
+    "pyarrow>=24.0.0",
+
+    # Data sources
+    "yfinance>=1.3.0",
+    "breeze-connect>=1.0",
+    "httpx>=0.27",
+
+    # Scheduling
+    "apscheduler>=3.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["warehouse/"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
